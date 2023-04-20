@@ -81,6 +81,10 @@ const ButtonContainer = styled.div`
 display: flex;
 margin-top: 20px;
 justify-content: flex-end;
+button:disabled{
+    background-color: grey;
+    cursor: default;
+}
 
 `
 const Button = styled.button`
