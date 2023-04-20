@@ -44,6 +44,7 @@ background: #FFFFFF;
 border: 1px solid #999999;
 border-radius: 16px;
 margin-bottom: 24px;
+overflow: hidden;
 `
 
 const Title = styled.div`
@@ -51,6 +52,7 @@ width: 100%;
 background-color: #7695EC;
 display: flex;
 justify-content: space-between;
+
 h1{
     padding-left: 15px;
     font-weight: 700;
