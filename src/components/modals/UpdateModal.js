@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { updatePost } from "../../actions/postApi"
 
 export default function UpdateModal({ updateModal, setUpdateModal, id }) {
-    const [form, setForm] = useState({})
+    const [form, setForm] = useState({content: "", title: ""})
     return (
         <Modal
             isOpen={updateModal}
@@ -34,6 +34,7 @@ export default function UpdateModal({ updateModal, setUpdateModal, id }) {
             <form onSubmit={(e) => {
                 e.preventDefault()
                 updatePost(id, form)
+                setForm({content: "", title: ""})
                 setUpdateModal(false)
             }}>
                 <InputContainer>
@@ -48,7 +49,7 @@ export default function UpdateModal({ updateModal, setUpdateModal, id }) {
                 </InputContainer>
                 <ButtonContainer>
                     <NoButton onClick={() => setUpdateModal(false)}>Cancel</NoButton>
-                    <YesButton type="submit">Save</YesButton>
+                    <YesButton disabled={!form.title || !form.content} type="submit">Save</YesButton>
                 </ButtonContainer>
             </form>
         </Modal>
