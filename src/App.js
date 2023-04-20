@@ -3,9 +3,10 @@ import {
   Routes,
   Route,
 } from 'react-router-dom';
-import SignUp from "./components/signUp"
+import SignUp from "./pages/SignUp"
 import { UserProvider } from './redux/UserContext';
 import {GlobalStyles} from "./assets/globalStyle"
+import Home from "./pages/Home"
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<SignUp />} />
+          <Route path="/home" element={<Home />} />
         </Routes>
       </Router>
     </UserProvider>);

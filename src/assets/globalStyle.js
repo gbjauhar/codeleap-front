@@ -2,15 +2,12 @@ import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyles = createGlobalStyle`
   body {
-    h1{
-      font-family: Cedarville cursive;
-    }
-    font-family: Montserrat, sans-serif;
-    transition: all 0.50s linear;
+    margin: auto;
+    width: 50%;
+    background-color: #DDDDDD;
+    font-family: 'Roboto';
     button{
-     font-family: Montserrat, sans-serif;
      cursor: pointer;
-     font-size: 14px;
     }
     a{
       text-decoration: none;

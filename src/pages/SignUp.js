@@ -35,7 +35,8 @@ export default function SignUp() {
                     }
                 }}>
                 <h1 style={{ 'font-size': '22px' }}>Welcome to the CodeLeap network!</h1>
-                <Form onSubmit={() => {
+                <Form onSubmit={(e) => {
+                    e.preventDefault()
                     setUserData(form)
                     navigate('/home')
                 }}>
@@ -72,6 +73,7 @@ color: #FFFFFF;
 }
 button:disabled{
     background-color: grey;
+    cursor: default;
 }
 input{
 width: 490px;
